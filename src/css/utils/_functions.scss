@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error ("rem() => Please, enter the px amount without unit");
+  }
+}

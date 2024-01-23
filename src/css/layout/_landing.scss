@@ -1,0 +1,87 @@
+@use "../utils" as u;
+
+.landing {
+  .container {
+    height: calc(100vh - 70px);
+    @include u.flex(flex-start, center);
+    flex-direction: column;
+    row-gap: u.rem(40);
+    padding-top: u.rem(60);
+
+    @include u.breakpoint(medium) {
+      padding-top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .text {
+    color: var(--gray-color);
+    text-align: center;
+
+    @include u.breakpoint(medium) {
+      text-align: left;
+    }
+
+    p {
+      font-size: u.rem(18);
+    }
+
+    h3 {
+      font-size: u.rem(36);
+      margin: u.rem(20) 0;
+    }
+
+    h2 {
+      font-size: u.rem(32);
+
+      @include u.breakpoint(small) {
+        font-size: u.rem(40);
+      }
+
+      @include u.breakpoint(large) {
+        font-size: u.rem(50);
+      }
+
+      @include u.breakpoint(xlarge) {
+        font-size: u.rem(56);
+      }
+
+      margin: u.rem(20) 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--light-gray-color);
+        width: 100%;
+        height: 30%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .image {
+    animation: move-up-down 8s infinite;
+    width: u.rem(310);
+
+    @include u.breakpoint(large) {
+      width: u.rem(400);
+    }
+    @include u.breakpoint(xlarge) {
+      width: u.rem(460);
+    }
+
+    @keyframes move-up-down {
+      0%,
+      100% {
+        transform: translateY(u.rem(-40));
+      }
+      50% {
+        transform: translateY(u.rem(40));
+      }
+    }
+  }
+}

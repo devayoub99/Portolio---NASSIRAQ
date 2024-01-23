@@ -1,3 +1,11 @@
+import Header from "./components/layout/Header";
+import Landing from "./components/layout/Landing";
+
 export default function App() {
-  return <h2>Hello, world</h2>;
+  return (
+    <>
+      <Header />
+      <Landing />
+    </>
+  );
 }

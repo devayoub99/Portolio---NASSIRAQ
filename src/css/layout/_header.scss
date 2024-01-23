@@ -1,0 +1,99 @@
+@use "../utils" as u;
+
+.page-header {
+  height: u.rem(70);
+  background-color: #fff;
+  @include u.flex(flex-start, center);
+
+  .container {
+    @include u.flex(space-between, center);
+  }
+
+  .logo {
+    font-size: u.rem(22);
+    @include u.flex(flex-start, center);
+    text-transform: capitalize;
+    gap: u.rem(12);
+    color: var(--gray-color);
+
+    img {
+      width: u.rem(38);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .links {
+    display: none;
+
+    @include u.breakpoint(medium) {
+      @include u.flex(flex-start, center);
+    }
+  }
+
+  .link {
+    @include u.flex(center, center);
+
+    a {
+      padding: u.rem(22) u.rem(30);
+      height: 100%;
+      color: var(--gray-color);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        border-radius: 50%;
+        left: 50%;
+        width: u.rem(10);
+        height: 0;
+        transform: translateX(-50%);
+        background-color: var(--light-gray-color);
+        transition: var(--short-duration);
+      }
+
+      &:hover::before {
+        opacity: 1;
+        height: u.rem(10);
+      }
+    }
+  }
+
+  .mobile-links {
+    position: fixed;
+    min-width: 60%;
+    bottom: u.rem(10);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 u.rem(20) #ccc;
+    background-color: #fff;
+    border-radius: u.rem(10);
+    padding: u.rem(12);
+    @include u.flex(space-between, center);
+    z-index: 5;
+
+    @include u.breakpoint(small) {
+      min-width: 50%;
+    }
+
+    @include u.breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  .icon-link {
+    padding: 0 u.rem(5);
+
+    @include u.breakpoint(small) {
+      padding: 0 u.rem(10);
+    }
+
+    img {
+      width: u.rem(32);
+    }
+  }
+}
