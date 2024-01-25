@@ -38,4 +38,47 @@ const links = [
   },
 ];
 
-export { links };
+const skills = [
+  {
+    id: 1,
+    language: "HTML",
+    progress: 4,
+  },
+  {
+    id: 2,
+    language: "CSS",
+    progress: 4,
+  },
+  {
+    id: 3,
+    language: "JavaScript",
+    progress: 4,
+  },
+  {
+    id: 4,
+    language: "SCSS",
+    progress: 4,
+  },
+  {
+    id: 5,
+    language: "Bootstrap",
+    progress: 3,
+  },
+  {
+    id: 6,
+    language: "Git & GitHub",
+    progress: 3,
+  },
+  {
+    id: 7,
+    language: "TailwindCSS",
+    progress: 4,
+  },
+  {
+    id: 8,
+    language: "React JS",
+    progress: 4,
+  },
+];
+
+export { links, skills };

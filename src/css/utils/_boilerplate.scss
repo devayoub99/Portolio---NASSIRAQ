@@ -1,5 +1,4 @@
-@use "./functions" as f;
-@use "./mixins" as m;
+@use "./mixins" as u;
 
 * {
   padding: 0;
@@ -15,6 +14,7 @@
 :root {
   --light-gray-color: hsl(0, 0%, 79%);
   --gray-color: hsl(201, 19%, 33%);
+  --selvery-color: #858585;
 
   --short-duration: 0.3s;
 }
@@ -46,24 +46,24 @@ img {
 
 .container {
   width: 100%;
-  padding-left: f.rem(15);
-  padding-right: f.rem(15);
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  @include m.breakpoint(small) {
-    width: map-get(m.$breakpoint-sizes, small) - 2.25em;
+  @include u.breakpoint(small) {
+    width: map-get(u.$breakpoint-sizes, small) - 2.25em;
   }
 
-  @include m.breakpoint(medium) {
-    width: map-get(m.$breakpoint-sizes, medium) - 3em;
+  @include u.breakpoint(medium) {
+    width: map-get(u.$breakpoint-sizes, medium) - 3em;
   }
 
-  @include m.breakpoint(large) {
-    width: map-get(m.$breakpoint-sizes, large) - 2em;
+  @include u.breakpoint(large) {
+    width: map-get(u.$breakpoint-sizes, large) - 2em;
   }
 
-  @include m.breakpoint(xlarge) {
-    width: map-get(m.$breakpoint-sizes, xlarge) - 3.75em;
+  @include u.breakpoint(xlarge) {
+    width: map-get(u.$breakpoint-sizes, xlarge) - 3.75em;
   }
 }

@@ -1,0 +1,77 @@
+@use "../utils" as u;
+
+.skills {
+  .image {
+    @include u.flex(center, center);
+    background-image: linear-gradient(
+      to right,
+      var(--light-gray-color),
+      var(--gray-color)
+    );
+
+    width: u.rem(180);
+    margin: u.rem(20) auto;
+    border-radius: 50%;
+    border: u.rem(4) solid var(--gray-color);
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .name {
+    font-size: u.rem(32);
+    text-align: center;
+    color: var(--gray-color);
+    margin: u.rem(20) 0;
+  }
+  .description {
+    width: 80%;
+    margin: u.rem(20) auto;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .bold-text {
+    color: var(--selvery-color)
+  }
+
+  .skills-container {
+    width: 84%;
+    margin: u.rem(40) auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: u.rem(40) u.rem(50);
+  }
+
+  .skill {
+    @include u.flex(center, center);
+    flex-direction: column;
+    flex: u.rem(160) 1 1;
+  }
+
+  .language {
+    color: var(--gray-color);
+    font-size: u.rem(22);
+  }
+
+  .progress {
+    padding-left: 3px;
+    li {
+      display: inline-block;
+      width: u.rem(18);
+      height: u.rem(18);
+      border: u.rem(2) solid var(--gray-color);
+      margin-top: u.rem(10);
+      margin-right: u.rem(12);
+      transform: rotate(45deg);
+    }
+
+    .empty-sequre {
+      opacity: 0.5;
+    }
+
+    .filled-sequre {
+      background-color: var(--gray-color);
+    }
+  }
+}

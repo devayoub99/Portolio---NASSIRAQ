@@ -1,0 +1,31 @@
+@use "./functions" as u;
+
+.special-heading {
+  width: fit-content;
+  margin: u.rem(20) auto;
+  font-size: u.rem(36);
+  position: relative;
+  padding: u.rem(8) 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: u.rem(4);
+    background-color: var(--gray-color);
+    border-radius: u.rem(6);
+  }
+
+  span {
+    color: var(--gray-color);
+  }
+}
+
+.normal-text {
+  font-weight: normal;
+}
+
+.bold-text {
+  font-weight: bold;
+}
