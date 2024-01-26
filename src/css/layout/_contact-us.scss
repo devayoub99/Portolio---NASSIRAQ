@@ -1,0 +1,72 @@
+@use "../utils" as u;
+
+.contact-us {
+  .special-heading {
+    margin: u.rem(20) auto;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: u.rem(30);
+    width: min(u.rem(750), 90%);
+    margin: 0 auto;
+  }
+
+  .input-field {
+    padding: u.rem(6);
+    border: transparent;
+    border-bottom: u.rem(2) solid #ccc;
+    font-size: u.rem(16);
+    transition: var(--short-duration);
+
+    &:focus {
+      outline: transparent;
+      border-color: #333;
+    }
+  }
+
+  textarea {
+    font-size: u.rem(16);
+    resize: none;
+  }
+
+  .contact-ways {
+    margin-top: u.rem(20);
+    display: flex;
+    gap: u.rem(15);
+
+    @include u.breakpoint(small) {
+      gap: u.rem(30);
+    }
+  }
+
+  .submit-btn,
+  .social-media-icon {
+    border-radius: u.rem(6);
+    transition: var(--short-duration);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .submit-btn {
+    padding: u.rem(12) u.rem(24);
+    background-color: transparent;
+    color: var(--gray-color);
+    font-weight: bold;
+    font-size: u.rem(18);
+    cursor: pointer;
+  }
+
+  .social-media-icon {
+    display: flex;
+    border: u.rem(2) solid var(--gray-color);
+    padding: u.rem(10);
+    @include u.breakpoint(small) {
+      padding: u.rem(14);
+    }
+    border-radius: u.rem(6);
+  }
+}

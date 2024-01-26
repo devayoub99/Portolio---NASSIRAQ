@@ -15,7 +15,7 @@
 
     @include u.breakpoint(small) {
       grid-template-columns: repeat(2, u.rem(240));
-      grid-template-rows: repeat(12, u.rem(60));
+      grid-template-rows: repeat(11, u.rem(60));
     }
 
     @include u.breakpoint(medium) {
@@ -64,8 +64,7 @@
     }
 
     .text {
-      display: flex;
-      gap: u.rem(30);
+      @include u.flex(space-between);
       opacity: 0;
       position: absolute;
       top: 0;
@@ -79,6 +78,7 @@
 
     .title {
       color: var(--gray-color);
+      font-size: u.rem(16);
     }
 
     .icons {

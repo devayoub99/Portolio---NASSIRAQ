@@ -10,6 +10,10 @@ import portfolioProjectImg from "./assets/new.webp";
 import oldPortfolioProjectImg from "./assets/old.webp";
 import ecoProjectImg from "./assets/eco.webp";
 
+import linkedinImg from "./assets/linkedin.svg";
+import discordImg from "./assets/discord.svg";
+import facebookImg from "./assets/facebook.svg";
+
 const links = [
   {
     id: 1,
@@ -30,15 +34,15 @@ const links = [
   },
   {
     id: 4,
-    title: "Resume",
-    icon: resumeIcon,
-    linkTo: resumeFile,
-  },
-  {
-    id: 5,
     title: "Contact",
     icon: contactIcon,
     linkTo: "#contact",
+  },
+  {
+    id: 5,
+    title: "Resume",
+    icon: resumeIcon,
+    linkTo: resumeFile,
   },
 ];
 
@@ -141,4 +145,25 @@ const projects = [
   },
 ];
 
-export { links, skills, projects };
+const socialMedia = [
+  {
+    id: 1,
+    title: "facebook",
+    img: facebookImg,
+    url: "https://www.facebook.com/profile.php?id=100085270735685",
+  },
+  {
+    id: 2,
+    title: "discord",
+    img: discordImg,
+    url: "https://discord.com/users/869210911863361567",
+  },
+  {
+    id: 3,
+    title: "linkedin",
+    img: linkedinImg,
+    url: "https://www.linkedin.com/in/ayoubjasim/",
+  },
+];
+
+export { links, skills, projects, socialMedia };
