@@ -5,6 +5,13 @@
   background-color: #fff;
   @include u.flex(flex-start, center);
 
+  @include u.breakpoint(medium) {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 u.rem(10) #eee;
+  }
+
   .container {
     @include u.flex(space-between, center);
   }
