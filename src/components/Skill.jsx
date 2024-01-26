@@ -11,7 +11,7 @@ export default function Skill({ language, progress }) {
 
   return (
     <div className="skill">
-      <h4 className="language">{language}</h4>
+      <h3 className="language">{language}</h3>
       <ul className="progress">
         {filledSequres.map((_, index) => (
           <li key={index} className="filled-sequre"></li>
