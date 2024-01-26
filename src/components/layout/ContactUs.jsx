@@ -60,9 +60,11 @@ export default function ContactUs() {
           />
           <div className="contact-ways">
             <input type="submit" value="Send" className="submit-btn" />
-            {socialMedia.map((el) => (
-              <SocialMediaIcon key={el.id} {...el} />
-            ))}
+            <div className="social-media">
+              {socialMedia.map((el) => (
+                <SocialMediaIcon key={el.id} {...el} />
+              ))}
+            </div>
           </div>
         </form>
       </div>

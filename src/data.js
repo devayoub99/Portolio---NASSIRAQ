@@ -13,6 +13,7 @@ import ecoProjectImg from "./assets/eco.webp";
 import linkedinImg from "./assets/linkedin.svg";
 import discordImg from "./assets/discord.svg";
 import facebookImg from "./assets/facebook.svg";
+import emailImg from "./assets/email.svg";
 
 const links = [
   {
@@ -163,6 +164,12 @@ const socialMedia = [
     title: "linkedin",
     img: linkedinImg,
     url: "https://www.linkedin.com/in/ayoubjasim/",
+  },
+  {
+    id: 4,
+    title: "Email",
+    img: emailImg,
+    url: "mailTo:admin@devayb.com",
   },
 ];
 
