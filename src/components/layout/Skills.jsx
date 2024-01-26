@@ -5,7 +5,7 @@ import Skill from "../Skill";
 
 export default function Skills() {
   return (
-    <section className="skills">
+    <section className="skills" id = "skills">
       <div className="container">
         <div className="brief">
           <div className="image">
