@@ -12,7 +12,7 @@ export default function Links({ className }) {
               href={link.linkTo}
               target={link.title === "Resume" ? "_blank" : undefined}
             >
-              <img src={link.icon} alt={link.title} />
+              <img src={link.icon} alt={link.title || "Home"} />
             </a>
           </li>
         ) : (
