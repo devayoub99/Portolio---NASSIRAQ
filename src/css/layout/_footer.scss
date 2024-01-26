@@ -1,7 +1,7 @@
 @use "../utils" as u;
 
 .page-footer {
-  background-color: var(--gray-color);
+  background-color: #333;
   padding: u.rem(15) 0;
   color: #eee;
   position: relative;
