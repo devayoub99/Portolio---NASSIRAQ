@@ -1,0 +1,21 @@
+@use "../utils" as u;
+
+.page-footer {
+  background-color: var(--gray-color);
+  padding: u.rem(15) 0;
+  color: #eee;
+  position: relative;
+  z-index: 6;
+
+  .container {
+    @include u.flex(space-between, center);
+  }
+
+  img {
+    width: u.rem(50);
+  }
+
+  .copyright {
+    font-weight: 300;
+  }
+}
