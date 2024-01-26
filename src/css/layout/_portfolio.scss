@@ -15,7 +15,7 @@
 
     @include u.breakpoint(small) {
       grid-template-columns: repeat(2, u.rem(240));
-      grid-template-rows: repeat(11, u.rem(60));
+      grid-template-rows: repeat(10, u.rem(60));
     }
 
     @include u.breakpoint(medium) {
@@ -118,25 +118,25 @@
     }
 
     @include u.breakpoint(large) {
-      grid-row: 5 / 12;
+      grid-row: 5 / 11;
     }
   }
 
   .project-5 {
     @include u.breakpoint(small) {
-      grid-row: 8 / 12;
+      grid-row: 8 / 11;
     }
     @include u.breakpoint(large) {
-      grid-row: 6 / 12;
+      grid-row: 6 / 11;
     }
   }
 
   .project-6 {
     @include u.breakpoint(small) {
-      grid-row: 9 / 12;
+      grid-row: 9 / 11;
     }
     @include u.breakpoint(large) {
-      grid-row: 7 / 12;
+      grid-row: 7 / 11;
     }
   }
 }
