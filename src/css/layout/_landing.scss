@@ -2,10 +2,10 @@
 
 .landing {
   .container {
-    height: calc(100vh - 70px);
+    height: min(calc(100vh - 70px), u.rem(900));
     @include u.flex(flex-start, center);
     flex-direction: column;
-    row-gap: u.rem(40);
+    row-gap: u.rem(60);
     padding-top: u.rem(60);
 
     @include u.breakpoint(medium) {
@@ -65,7 +65,7 @@
 
   .image {
     animation: move-up-down 8s infinite;
-    width: u.rem(310);
+    width: u.rem(300);
 
     @include u.breakpoint(large) {
       width: u.rem(400);
