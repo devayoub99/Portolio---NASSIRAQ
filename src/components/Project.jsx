@@ -1,8 +1,14 @@
+import { motion as m } from "framer-motion";
+
 import ProjectLinkIcon from "./ProjectLinkIcon";
 
 export default function Project(props) {
   return (
-    <div className={`project project-${props.id}`}>
+    <m.div
+      className={`project project-${props.id}`}
+      variants={props.variants}
+      custom={props.custom}
+    >
       <a href={props.liveUrl} target="_blank" className="image">
         <img src={props.imgUrl} alt={`Project ${props.id}`} />
       </a>
@@ -17,6 +23,6 @@ export default function Project(props) {
           <ProjectLinkIcon icon="GitHub" url={props.githubUrl} />
         </div>
       </div>
-    </div>
+    </m.div>
   );
 }

@@ -1,19 +1,40 @@
+import { motion as m } from "framer-motion";
+
 import { projects } from "../../data";
 import Project from "../Project";
+import { fadeInHeadingVariants, fadeInVariants } from "../../animations";
 
 export default function Portfolio() {
   return (
-    <section className="portfolio" id="portfolio">
+    <m.section
+      className="portfolio"
+      id="portfolio"
+      initial="from"
+      whileInView="to"
+      viewport={{ once: true }}
+    >
       <div className="container">
-        <h2 className="special-heading">
-          My <span className="colored">Portfolio</span>
-        </h2>
+        <m.h2 className="special-heading" variants={fadeInHeadingVariants}>
+          My
+          <m.span
+            className="colored"
+            variants={fadeInHeadingVariants}
+            custom={1}
+          >
+            Portfolio
+          </m.span>
+        </m.h2>
         <div className="projects">
-          {projects.map((project) => (
-            <Project key={project.id} {...project} />
+          {projects.map((project, index) => (
+            <Project
+              key={project.id}
+              {...project}
+              variants={fadeInVariants}
+              custom={index}
+            />
           ))}
         </div>
       </div>
-    </section>
+    </m.section>
   );
 }
