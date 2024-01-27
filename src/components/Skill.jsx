@@ -1,4 +1,8 @@
-export default function Skill({ language, progress }) {
+import { motion as m } from "framer-motion";
+
+
+
+export default function Skill({ language, progress, variants, custom }) {
   const filledSequres = Array.from(
     { length: progress },
     (_, index) => index + 1
@@ -10,7 +14,7 @@ export default function Skill({ language, progress }) {
   );
 
   return (
-    <div className="skill">
+    <m.div className="skill" variants={variants} custom={custom}>
       <h3 className="language">{language}</h3>
       <ul className="progress">
         {filledSequres.map((_, index) => (
@@ -22,6 +26,6 @@ export default function Skill({ language, progress }) {
           </li>
         ))}
       </ul>
-    </div>
+    </m.div>
   );
 }
